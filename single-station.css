@@ -1,0 +1,3 @@
+/* Estacao unica - interface real da bancada */
+.station-picker-grid,.dual-stations {grid-template-columns:minmax(0,1fr)!important;}
+.target-btn[data-target="SEM-002"],.station-card[data-station="SEM-002"],.admin-station[data-id="SEM-002"],#start-tour {display:none!important;}

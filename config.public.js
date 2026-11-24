@@ -1,5 +1,2 @@
-/* Esta configuração é PÚBLICA. Use somente a Publishable Key (sb_publishable_...). */
-window.IFAC_RDS_CONFIG = {
-  supabaseUrl: 'https://pczoilgfthwhzrhfezli.supabase.co',
-  supabasePublishableKey: 'sb_publishable_NhuMk8m0v9gvGdc28etveA_5FV3YcSV'
-};
+/* IFAC Multi-ID Vercel 1.0 — as credenciais sensíveis ficam somente nas variáveis do servidor. */
+window.IFAC_RDS_CONFIG = { version: '1.0', tutorialAutoStart: true, demoLocal: false, targets: ['SEM-001','SEM-002'] };

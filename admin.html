@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#083b29" name="theme-color"/>
+<title>Painel do expositor • IFAC Rádio em Movimento</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="admin.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="single-station.css">
+</head>
+<body class="admin-page">
+<div class="institutional-strip"><div class="shell strip-inner"><span>INSTITUTO FEDERAL DO ACRE <span class="strip-divider">/</span> CIÊNCIA &amp; TECNOLOGIA</span><span class="strip-year">CONCT&amp;T 2026 <span class="strip-divider">•</span> PAINEL DO EXPOSITOR</span></div></div>
+<header class="site-header shell admin-site-header">
+<a class="institution-brand admin-brand-link" href="/" title="Abrir site do visitante">
+<svg aria-label="Marca estilizada IFAC" class="if-mark" role="img" viewbox="0 0 90 110">
+<circle cx="12" cy="12" fill="#cd191e" r="10.5"></circle>
+<g fill="#2f9e41"><rect height="21" rx="2" width="21" x="30" y="1.5"></rect><rect height="21" rx="2" width="21" x="59" y="1.5"></rect><rect height="21" rx="2" width="21" x="1.5" y="30.5"></rect><rect height="21" rx="2" width="21" x="30" y="30.5"></rect><rect height="21" rx="2" width="21" x="1.5" y="59.5"></rect><rect height="21" rx="2" width="21" x="30" y="59.5"></rect><rect height="21" rx="2" width="21" x="59" y="59.5"></rect><rect height="21" rx="2" width="21" x="1.5" y="88.5"></rect><rect height="21" rx="2" width="21" x="30" y="88.5"></rect></g>
+</svg>
+<div class="brand-copy"><div class="institution-name">INSTITUTO FEDERAL</div><div class="brand-location">Acre <span class="brand-separator"></span> <span>CONCT&amp;T</span></div></div>
+</a>
+<div class="header-right"><span class="header-edition">MODO DE DEMONSTRAÇÃO<br/><b>OPERADOR / SEM-001</b></span><span class="header-status"><span class="live-dot"></span> ADMINISTRADOR</span></div>
+</header>
+<section class="admin-banner"><div class="shell admin-banner-inner">
+<div><div class="eyebrow hero-eyebrow">ESTAÇÃO DE CONTROLE • IFAC</div><h1>O comando está<br/><em>em suas mãos.</em></h1><p>Autorize visitantes à distância e acompanhe o envio USB, FM-RDS e a recepção física do semáforo SEM-001.</p></div>
+<div aria-hidden="true" class="admin-hero-radio"><div class="admin-hero-freq">106.1 <span>MHz</span></div><div class="admin-hero-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="admin-hero-label">SEM-001  •  USB + FM-RDS</div></div>
+</div></section>
+<main class="shell admin-content">
+<div class="admin-demo-banner"><span class="admin-demo-icon">✳</span><div><b>OPERAÇÃO ONLINE • PONTE USB</b><p>Este painel e o visitante compartilham a fila pelo Supabase. O notebook deve estar ligado aos dois ESPs pela USB para transmitir e registrar o comando físico.</p></div></div>
+<section class="panel login-panel" id="login-section">
+<div class="panel-index">ACESSO RESTRITO AO EXPOSITOR</div><h2>Entrar no painel</h2>
+<p class="muted">Digite a senha de administração configurada nas variáveis de ambiente da Vercel.</p>
+<form class="login-form" id="login-form"><label for="admin-pin">SENHA DO ADMINISTRADOR</label><input autocomplete="off" id="admin-pin" maxlength="128" name="pin" placeholder="Digite a senha do expositor" required="" type="password"/><button class="btn primary wide" type="submit">ENTRAR NO PAINEL ↗</button></form>
+<p aria-live="polite" class="inline-error" id="login-error" role="alert"></p>
+<p class="panel-note">O painel pode ser aberto pela Vercel, mas suas operações exigem autenticação e são executadas somente no servidor.</p>
+</section>
+<div hidden="" id="dashboard">
+<div class="admin-toolbar"><div><div class="section-tag">01 — OPERAÇÃO AO VIVO</div><h2>Central de <em>comando.</em></h2><p class="admin-subline">Uma pessoa ativa por vez • SEM-001</p></div><div class="toolbar-side"><span class="toolbar-chip" id="connection-pill"><i></i> CONECTADO</span><button class="btn ghost btn-compact" id="logout" type="button">Sair</button></div></div>
+<div class="admin-metrics">
+<div class="panel metric"><div class="metric-heading"><small>NA FILA</small><span>01</span></div><strong id="metric-queue">0</strong><div class="metric-foot">Aguardando aprovação</div></div>
+<div class="panel metric"><div class="metric-heading"><small>SESSÃO</small><span>02</span></div><strong id="metric-active">Livre</strong><div class="metric-foot">1 visitante / 90 segundos</div></div>
+<div class="panel metric"><div class="metric-heading"><small>COMANDOS</small><span>03</span></div><strong id="metric-commands">0</strong><div class="metric-foot">Comandos registrados na nuvem</div></div>
+<div class="panel metric"><div class="metric-heading"><small>NO AR</small><span>04</span></div><strong class="mono" id="metric-uptime">00:00</strong><div class="metric-foot">Tempo desde a instalação do sistema</div></div>
+</div>
+<div class="admin-workspace">
+<div class="admin-main-col">
+<section class="panel admin-panel queue-panel">
+<div class="panel-heading"><div><div class="panel-index">02 — FILA DE ESPERA</div><h3>Quem quer participar?</h3></div><span class="pill" id="queue-count">0 PESSOAS</span></div>
+<p class="panel-subtitle">Aprovar libera 90 segundos de controle do SEM-001. Outras pessoas permanecem aguardando.</p>
+<div aria-live="polite" class="queue-list" id="queue-list"><p class="muted">Nenhum visitante na fila.</p></div>
+<div class="queue-footer"><button class="btn secondary" id="approve-next" type="button">APROVAR PRÓXIMO</button><button class="btn ghost" id="reject-all" type="button">Recusar toda a fila</button></div>
+</section>
+<section class="panel admin-panel session-panel">
+<div class="panel-heading"><div><div class="panel-index">03 — ACESSO LIBERADO</div><h3>Sessão em andamento</h3></div><span class="pill" id="session-badge">LIVRE</span></div>
+<div class="session-card" id="session-card"><div class="session-avatar">◎</div><div><small>CONTROLE DISPONÍVEL</small><b id="active-name">Nenhum visitante ativo</b><p id="active-message">Aprove alguém da fila para iniciar uma demonstração.</p></div></div>
+<div class="session-bottom"><div class="session-timer"><small>TEMPO RESTANTE</small><strong id="active-timer">01:30</strong></div><button class="btn danger" disabled="" id="end-session" type="button">ENCERRAR SESSÃO</button></div>
+</section>
+<section class="panel admin-panel history-panel">
+<div class="panel-heading"><div><div class="panel-index">05 — AUDITORIA DIDÁTICA</div><h3>Histórico de comandos</h3></div><span class="pill">POR ID</span></div>
+<div class="history-header"><span>HORA / VISITANTE</span><span>DESTINO / PAYLOAD</span><span>RESULTADO</span></div>
+<div class="history-list" id="history-list"><p class="muted">Nenhum comando ainda.</p></div>
+</section>
+</div>
+<div class="admin-side-col">
+<section class="panel admin-panel stations-panel">
+<div class="panel-heading"><div><div class="panel-index">04 — MONITORAMENTO FÍSICO</div><h3>Um semáforo, estado real.</h3></div></div>
+<p class="panel-subtitle">As cores são atualizadas somente após o relatório RX_REPORT recebido pela ponte USB. Sem a ponte, o painel fica offline.</p>
+<div class="admin-station" data-id="SEM-001">
+<div class="admin-station-head"><div><small>LOCALIZAÇÃO A</small><b>SEM-001</b></div><span class="status-micro">AGUARDANDO</span></div>
+<div class="admin-station-body"><div class="admin-signal"><i class="admin-lamp red"></i><i class="admin-lamp yellow"></i><i class="admin-lamp green"></i></div><div class="admin-station-info"><strong id="station-a-state">Aguardando comando</strong><small id="station-a-mode">MODO MANUAL</small><code id="station-a-payload">RDS —</code><span id="station-a-delivery">PRONTO PARA TESTE</span></div></div>
+</div>
+
+<div class="admin-address-example"><span>MODELO DE ENDEREÇAMENTO</span><b>ID <code>SEM-001</code> + COMANDO <code>110000</code></b><p>O firmware verifica ID e checksum no FM-RDS antes do acionamento.</p></div>
+<button class="btn ghost wide" id="reset-signals" type="button">LIMPAR SINAIS E HISTÓRICO</button>
+</section>
+<section class="panel admin-panel notes-panel">
+<div class="panel-index">06 — APOIO À EXPOSIÇÃO</div><h3>Como testar com o visitante</h3>
+<ol><li>Abra o site do visitante em outra aba ou celular.</li><li>Peça que digite o nome e solicite acesso.</li><li>Aqui, aprove a pessoa na fila.</li><li>Peça que envie uma cor para SEM-001.</li><li>Observe o RX_REPORT na ponte USB e o registro do comando.</li></ol>
+<a class="btn secondary wide" href="/" rel="noopener" target="_blank">ABRIR SITE DO VISITANTE ↗</a>
+<div class="notes-divider"></div><button class="btn ghost wide" id="reset-demo" type="button">REINICIAR SESSÕES DA DEMONSTRAÇÃO</button>
+</section>
+</div>
+</div>
+<p aria-live="polite" class="action-toast" id="action-toast" role="status"></p>
+</div>
+</main>
+<footer class="site-footer"><div class="shell footer-inner"><span>© 2026 • IFAC • ADMINISTRADOR DE DEMONSTRAÇÃO</span><span>Protótipo de baixa tensão • transmissão FM somente quando autorizada.</span></div></footer>
+<script src="admin.js"></script>
+</body>
+</html>

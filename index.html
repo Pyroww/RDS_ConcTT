@@ -1,102 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#073d2b">
-  <meta name="description" content="Experiência interativa de telecomunicações no CONCT&T IFAC: controle uma maquete de semáforo por rádio FM-RDS.">
-  <title>Rádio em Movimento · CONCT&T IFAC 2026</title>
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#073d2b" name="theme-color"/>
+<meta content="Experiência interativa de telecomunicações no CONCT&amp;T IFAC: controle uma maquete de semáforo por rádio FM-RDS." name="description"/>
+<title>Rádio em Movimento · CONCT&amp;T IFAC 2026</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="tutorial.css" rel="stylesheet"/>
+<link href="dual-stations.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="single-station.css">
 </head>
-<body class="visitor-page">
-  <div class="institutional-strip">
-    <div class="shell strip-inner"><span>INSTITUTO FEDERAL DO ACRE <span class="strip-divider">/</span> CIÊNCIA &amp; TECNOLOGIA</span><span class="strip-year">EDIÇÃO 2026 <span class="strip-divider">•</span> EXPOSIÇÃO INTERATIVA</span></div>
-  </div>
-  <header class="site-header shell">
-    <div class="institution-brand">
-      <svg class="if-mark" viewBox="0 0 90 110" role="img" aria-label="Símbolo inspirado na identidade do Instituto Federal">
-        <circle cx="12" cy="12" r="10.5" fill="#cd191e"/>
-        <g fill="#2f9e41"><rect x="30" y="1.5" width="21" height="21" rx="2"/><rect x="59" y="1.5" width="21" height="21" rx="2"/><rect x="1.5" y="30.5" width="21" height="21" rx="2"/><rect x="30" y="30.5" width="21" height="21" rx="2"/><rect x="1.5" y="59.5" width="21" height="21" rx="2"/><rect x="30" y="59.5" width="21" height="21" rx="2"/><rect x="59" y="59.5" width="21" height="21" rx="2"/><rect x="1.5" y="88.5" width="21" height="21" rx="2"/><rect x="30" y="88.5" width="21" height="21" rx="2"/></g>
-      </svg>
-      <div class="brand-copy"><div class="institution-name">INSTITUTO FEDERAL</div><div class="brand-location">Acre <span class="brand-separator"></span> <span>CONCT&amp;T</span></div></div>
-    </div>
-    <div class="header-right"><span class="header-edition">MOSTRA DE TECNOLOGIA<br><b>FM / RADIO DATA SYSTEM</b></span><span class="header-status"><span class="live-dot"></span> EXPERIÊNCIA AO VIVO</span></div>
-  </header>
+<body class="visitor-page demo-local">
+<div class="institutional-strip">
+<div class="shell strip-inner"><span>INSTITUTO FEDERAL DO ACRE <span class="strip-divider">/</span> CIÊNCIA &amp; TECNOLOGIA</span><span class="strip-year">EDIÇÃO 2026 <span class="strip-divider">•</span> EXPOSIÇÃO INTERATIVA</span></div>
+</div>
+<header class="site-header shell">
+<div class="institution-brand">
+<svg aria-label="Símbolo inspirado na identidade do Instituto Federal" class="if-mark" role="img" viewbox="0 0 90 110">
+<circle cx="12" cy="12" fill="#cd191e" r="10.5"></circle>
+<g fill="#2f9e41"><rect height="21" rx="2" width="21" x="30" y="1.5"></rect><rect height="21" rx="2" width="21" x="59" y="1.5"></rect><rect height="21" rx="2" width="21" x="1.5" y="30.5"></rect><rect height="21" rx="2" width="21" x="30" y="30.5"></rect><rect height="21" rx="2" width="21" x="1.5" y="59.5"></rect><rect height="21" rx="2" width="21" x="30" y="59.5"></rect><rect height="21" rx="2" width="21" x="59" y="59.5"></rect><rect height="21" rx="2" width="21" x="1.5" y="88.5"></rect><rect height="21" rx="2" width="21" x="30" y="88.5"></rect></g>
+</svg>
+<div class="brand-copy"><div class="institution-name">INSTITUTO FEDERAL</div><div class="brand-location">Acre <span class="brand-separator"></span> <span>CONCT&amp;T</span></div></div>
+</div>
+<div class="header-right"><span class="header-edition">MOSTRA DE TECNOLOGIA<br/><b>FM / RADIO DATA SYSTEM</b></span><span class="header-status"><span class="live-dot"></span> EXPERIÊNCIA AO VIVO</span></div>
+</header>
+<main>
+<section class="hero-stage">
+<div class="hero-grid shell">
+<div class="hero-copy">
+<div class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> O PASSADO TRANSMITE O FUTURO</div>
+<h1>O rádio mudou<br/>o mundo.<br/><em>Agora é sua vez.</em></h1>
+<p>Você controla um semáforo físico, com autorização do expositor. O notebook envia os comandos por USB ao ESP32 e o <strong>FM-RDS</strong> entrega pelo ar ao receptor.</p>
+<div class="hero-cta"><a class="btn primary hero-button" href="#experiencia">VIVER A EXPERIÊNCIA <span aria-hidden="true">↗</span></a><div class="hero-caption"><span class="mini-led"></span> TECNOLOGIA QUE VOCÊ PODE TESTAR</div></div>
+<div class="hero-facts"><span><b>106.1</b> MHz <small>FM DE DEMONSTRAÇÃO*</small></span><span class="fact-divider"></span><span><b>57</b> kHz <small>SUBPORTADORA RDS</small></span><span class="fact-divider"></span><span><b>01</b> VISITANTE <small>POR SESSÃO</small></span></div>
+</div>
+<div aria-label="Ilustração de um rádio retrô estilizado para a demonstração" class="radio-art">
+<div class="radio-aura"></div>
+<div class="radio-antenna"></div>
+<div class="radio-shell">
+<div class="radio-topline"><span>RÁDIO LAB <b>IFAC</b></span><span class="radio-power"><i></i> ON AIR</span></div>
+<div class="radio-face"><div class="radio-frequency"><div class="radio-freq-title">FM STEREO · RDS 2A</div><div class="frequency-line">106<span class="freq-dot">.</span>1 <small>MHz</small></div><div aria-hidden="true" class="radio-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="freq-bottom">SIGNAL <span class="freq-bars">▂ ▄ ▆ █</span> <span>TX → RX</span></div></div><div aria-hidden="true" class="radio-speaker"><div class="speaker-circle"><div class="speaker-inner"></div></div></div></div>
+<div class="radio-bottom"><span class="radio-model">CONCT&amp;T <b>2026</b> / EXPERIMENTAL</span><div aria-hidden="true" class="radio-controls"><div class="radio-knob knob-small"></div><div class="radio-knob knob-large"></div></div></div>
+</div>
+<div class="radio-caption"><span class="caption-star">✳</span> DE ONTEM PARA AMANHÃ <span class="caption-rule"></span> FM-RDS</div>
+</div>
+</div>
+<div aria-hidden="true" class="hero-bottom-border"></div>
+</section>
+<section class="experience-section shell" id="experiencia">
+<div class="section-intro"><div><span class="section-tag">01 — INTERAÇÃO AO VIVO</span><h2>Sua estação de <em>comando.</em></h2><p>Uma sessão por vez e um semáforo real de demonstração. Peça acesso para controlar as três cores.</p></div><div class="section-stamp"><span>CONCT&amp;T</span><b>IFAC</b><small>RÁDIO • CIÊNCIA • PRÁTICA</small></div></div>
+<div class="id-concept" id="id-concept">
+<div class="id-concept-head"><span aria-hidden="true" class="id-concept-icon">⌁</span><div><span class="mini-tag">PROTOCOLO • FM-RDS</span><h3>Um comando, um semáforo.</h3><p>O transmissor envia a mensagem com o ID <b>SEM-001</b>, e o receptor só aciona os relés quando decodifica o FM-RDS. O status de entrega depende de uma confirmação pela USB.</p></div></div>
+<div aria-label="Esquema conceitual de endereçamento" class="addressing-flow">
+<span class="flow-node">📱 <b>Comando</b></span><span class="flow-arrow">→</span><span class="flow-node flow-fm">📻 <b>FM-RDS</b></span><span class="flow-arrow">⇢</span>
+<span class="flow-node flow-target">ID: <b>SEM-001</b></span>
+</div>
+</div>
+<div class="dashboard">
+<article class="panel control-panel">
+<div class="panel-heading"><div><div class="panel-index">ESTAÇÃO 01 <span>•</span> INTERAÇÃO</div><h3 id="status-title">Solicite seu acesso</h3></div><span aria-live="polite" class="pill" id="state-badge">CONECTANDO…</span></div>
+<div aria-label="Escolher semáforo de destino" class="station-picker" id="station-picker">
+<div class="picker-heading"><span class="control-section-title">SEMÁFORO DISPONÍVEL</span><small>Um único destino • SEM-001</small></div>
+<div aria-label="Semáforo a controlar" class="station-picker-grid" id="station-selector" role="group">
+<button aria-pressed="true" class="target-btn selected" data-target="SEM-001" type="button"><span class="target-icon">A</span><span class="target-label"><b>Localização A</b><small>ID: SEM-001</small></span><span aria-hidden="true" class="target-check">✓</span></button>
 
-  <main>
-    <section class="hero-stage">
-      <div class="hero-grid shell">
-        <div class="hero-copy">
-          <div class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> O PASSADO TRANSMITE O FUTURO</div>
-          <h1>O rádio mudou<br>o mundo.<br><em>Agora é sua vez.</em></h1>
-          <p>Você toca no celular. O comando viaja pelo ar em uma transmissão <strong>FM-RDS</strong>. E uma maquete de semáforo responde diante dos seus olhos.</p>
-          <div class="hero-cta"><a class="btn primary hero-button" href="#experiencia">VIVER A EXPERIÊNCIA <span aria-hidden="true">↗</span></a><div class="hero-caption"><span class="mini-led"></span> TECNOLOGIA QUE VOCÊ PODE TESTAR</div></div>
-          <div class="hero-facts"><span><b>106.1</b> MHz <small>FM DE DEMONSTRAÇÃO*</small></span><span class="fact-divider"></span><span><b>57</b> kHz <small>SUBPORTADORA RDS</small></span><span class="fact-divider"></span><span><b>01</b> VISITANTE <small>POR SESSÃO</small></span></div>
-        </div>
-        <div class="radio-art" aria-label="Ilustração de um rádio retrô estilizado para a demonstração">
-          <div class="radio-aura"></div>
-          <div class="radio-antenna"></div>
-          <div class="radio-shell">
-            <div class="radio-topline"><span>RÁDIO LAB <b>IFAC</b></span><span class="radio-power"><i></i> ON AIR</span></div>
-            <div class="radio-face"><div class="radio-frequency"><div class="radio-freq-title">FM STEREO · RDS 2A</div><div class="frequency-line">106<span class="freq-dot">.</span>1 <small>MHz</small></div><div class="radio-wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="freq-bottom">SIGNAL <span class="freq-bars">▂ ▄ ▆ █</span> <span>TX → RX</span></div></div><div class="radio-speaker" aria-hidden="true"><div class="speaker-circle"><div class="speaker-inner"></div></div></div></div>
-            <div class="radio-bottom"><span class="radio-model">CONCT&amp;T <b>2026</b> / EXPERIMENTAL</span><div class="radio-controls" aria-hidden="true"><div class="radio-knob knob-small"></div><div class="radio-knob knob-large"></div></div></div>
-          </div>
-          <div class="radio-caption"><span class="caption-star">✳</span> DE ONTEM PARA AMANHÃ <span class="caption-rule"></span> FM-RDS</div>
-        </div>
-      </div>
-      <div class="hero-bottom-border" aria-hidden="true"></div>
-    </section>
+</div>
+<div class="target-feedback"><span>DESTINO ATUAL</span><b id="selected-target-label">LOCALIZAÇÃO A • SEM-001</b></div>
+</div>
+<div id="idle-area">
+<div class="intro-callout"><div aria-hidden="true" class="callout-icon">↗</div><p><strong>Seu celular será o controle remoto da maquete semafórica.</strong><br/>O expositor aprova manualmente um visitante por vez, durante 90 segundos. Os comandos seguem pelo FM-RDS depois da aprovação.</p></div>
+<label class="input-label" for="name">COMO PODEMOS CHAMAR VOCÊ?</label><input autocomplete="nickname" id="name" maxlength="30" placeholder="Digite seu nome ou apelido"/>
+<button class="btn primary wide" id="join">SOLICITAR ACESSO <span class="btn-arrow">↗</span></button>
+<p class="footnote privacy-note"><span aria-hidden="true">✳</span> Sem cadastro, número de telefone ou coleta de e-mail.</p>
+</div>
+<div hidden="" id="wait-area">
+<div class="queue-graphic"><div class="queue-signal"><span></span><span></span><span></span><span></span></div><div class="big-number"><span id="position">—</span><small>SUA POSIÇÃO NA FILA</small></div></div>
+<p class="muted center" id="wait-message">Aguarde a aprovação do expositor.</p>
+<div class="timer"><span>TEMPO RESTANTE NA FILA</span><strong id="waiting-left">05:00</strong></div>
+<div aria-label="Progresso do tempo de espera" class="queue-progress"><div id="waiting-progress"></div></div>
+<button class="btn ghost wide" id="cancel">Cancelar solicitação</button>
+</div>
+<div hidden="" id="active-area">
+<div class="timer accent"><span>SEU TEMPO NO CONSOLE</span><strong id="control-left">01:30</strong></div>
+<div class="console-subtitle"><span class="console-tag">● CANAL LIBERADO</span><p>Os botões enviam comandos físicos ao semáforo SEM-001 por FM-RDS; a confirmação vem do Si4703 via USB.</p></div>
+<div class="control-section-title">CONTROLES DO DESTINO SELECIONADO <span>01 / 02</span></div>
+<div class="command-target-strip">TRANSMITIR PARA <strong id="command-target">LOCALIZAÇÃO A • SEM-001</strong></div><div class="button-grid"><button class="btn command red" data-kind="red"><span class="color-dot red-bg"></span><span>VERMELHO</span></button><button class="btn command yellow" data-kind="yellow"><span class="color-dot yellow-bg"></span><span>AMARELO</span></button><button class="btn command green" data-kind="green"><span class="color-dot green-bg"></span><span>VERDE</span></button></div>
+<div class="cycle-card"><div class="cycle-head"><div><div class="control-section-title">CICLO AUTOMÁTICO <span>02 / 02</span></div><b>Programe os três tempos</b></div><small>Em segundos (2–30)</small></div><div class="fields"><label>VERDE<input id="green-sec" inputmode="numeric" max="30" min="2" type="number" value="8"/></label><label>AMARELO<input id="yellow-sec" inputmode="numeric" max="30" min="2" type="number" value="3"/></label><label>VERMELHO<input id="red-sec" inputmode="numeric" max="30" min="2" type="number" value="8"/></label></div><button class="btn secondary wide" id="auto">TRANSMITIR CICLO <span class="btn-arrow">↗</span></button></div>
+<button class="btn ghost wide" id="finish">Encerrar meu acesso</button>
+</div>
+<div hidden="" id="result-area"><div class="result-ornament">✳</div><p class="muted" id="result-text"></p><button class="btn primary wide" id="again">SOLICITAR NOVAMENTE <span class="btn-arrow">↗</span></button></div>
+<p aria-live="polite" class="toast" id="toast" role="status"></p>
+</article>
+<article class="panel visualization" id="dual-visualization">
+<div class="panel-heading"><div><div class="panel-index">ESTAÇÃO 02 <span>•</span> RECEPTOR FÍSICO</div><h3>O semáforo responde.</h3></div><span class="pill" id="mode-badge">MONITORAMENTO USB</span></div>
+<p class="dual-intro">O painel só confirma uma cor quando a ponte recebe o relatório físico do receptor pela porta USB.</p>
+<div class="dual-stations" id="dual-stations">
+<article aria-label="Estado do semáforo da localização A" class="station-card selected" data-station="SEM-001">
+<div class="station-card-head"><div><span class="station-site">LOCALIZAÇÃO A</span><span class="station-id">SEM-001</span></div><span class="station-health">● AGUARDANDO USB</span></div>
+<div class="mini-receiver"><div class="mini-signal"><div class="mini-lamp mini-red" id="a-red"></div><div class="mini-lamp mini-yellow" id="a-yellow"></div><div class="mini-lamp mini-green" id="a-green"></div></div><div class="station-readout"><small>ÚLTIMO COMANDO</small><strong id="a-state">Aguardando comando</strong><span class="mono" id="a-payload">RDS —</span><span class="station-delivery" id="a-delivery">PRONTO PARA TESTE</span></div></div>
+<div class="station-foot"><span id="a-mode">MODO MANUAL</span><span class="station-selected-label">DESTINO SELECIONADO</span></div>
+</article>
 
-    <section class="experience-section shell" id="experiencia">
-      <div class="section-intro"><div><span class="section-tag">01 — INTERAÇÃO AO VIVO</span><h2>Sua estação de <em>comando.</em></h2><p>Uma experiência por vez. Solicite acesso, aguarde a liberação do expositor e faça sua transmissão.</p></div><div class="section-stamp"><span>CONCT&amp;T</span><b>IFAC</b><small>RÁDIO • CIÊNCIA • PRÁTICA</small></div></div>
-
-      <div class="dashboard">
-        <article class="panel control-panel">
-          <div class="panel-heading"><div><div class="panel-index">ESTAÇÃO 01 <span>•</span> INTERAÇÃO</div><h3 id="status-title">Solicite seu acesso</h3></div><span id="state-badge" class="pill" aria-live="polite">CONECTANDO…</span></div>
-          <div id="idle-area">
-            <div class="intro-callout"><div class="callout-icon" aria-hidden="true">↗</div><p><strong>Seu celular será o controle remoto.</strong><br>O expositor libera um visitante de cada vez para uma sessão de 90 segundos.</p></div>
-            <label class="input-label" for="name">COMO PODEMOS CHAMAR VOCÊ?</label><input id="name" maxlength="30" placeholder="Digite seu nome ou apelido" autocomplete="nickname">
-            <button id="join" class="btn primary wide">SOLICITAR ACESSO <span class="btn-arrow">↗</span></button>
-            <p class="footnote privacy-note"><span aria-hidden="true">✳</span> Sem cadastro, número de telefone ou coleta de e-mail.</p>
-          </div>
-          <div id="wait-area" hidden>
-            <div class="queue-graphic"><div class="queue-signal"><span></span><span></span><span></span><span></span></div><div class="big-number"><span id="position">—</span><small>SUA POSIÇÃO NA FILA</small></div></div>
-            <p id="wait-message" class="muted center">Aguarde a aprovação do expositor.</p>
-            <div class="timer"><span>TEMPO RESTANTE NA FILA</span><strong id="waiting-left">05:00</strong></div>
-            <div class="queue-progress" aria-label="Progresso do tempo de espera"><div id="waiting-progress"></div></div>
-            <button id="cancel" class="btn ghost wide">Cancelar solicitação</button>
-          </div>
-          <div id="active-area" hidden>
-            <div class="timer accent"><span>SEU TEMPO NO CONSOLE</span><strong id="control-left">01:30</strong></div>
-            <div class="console-subtitle"><span class="console-tag">● CANAL LIBERADO</span><p>Escolha a luz. O Supabase entrega ao notebook, que encaminha ao ESP32; o rádio leva o comando até a maquete.</p></div>
-            <div class="control-section-title">CONTROLES DE SINALIZAÇÃO <span>01 / 02</span></div>
-            <div class="button-grid"><button class="btn command red" data-kind="red"><span class="color-dot red-bg"></span><span>VERMELHO</span></button><button class="btn command yellow" data-kind="yellow"><span class="color-dot yellow-bg"></span><span>AMARELO</span></button><button class="btn command green" data-kind="green"><span class="color-dot green-bg"></span><span>VERDE</span></button></div>
-            <div class="cycle-card"><div class="cycle-head"><div><div class="control-section-title">CICLO AUTOMÁTICO <span>02 / 02</span></div><b>Programe os três tempos</b></div><small>Em segundos (2–30)</small></div><div class="fields"><label>VERDE<input id="green-sec" type="number" min="2" max="30" value="8" inputmode="numeric"></label><label>AMARELO<input id="yellow-sec" type="number" min="2" max="30" value="3" inputmode="numeric"></label><label>VERMELHO<input id="red-sec" type="number" min="2" max="30" value="8" inputmode="numeric"></label></div><button class="btn secondary wide" id="auto">TRANSMITIR CICLO <span class="btn-arrow">↗</span></button></div>
-            <button class="btn ghost wide" id="finish">Encerrar meu acesso</button>
-          </div>
-          <div id="result-area" hidden><div class="result-ornament">✳</div><p id="result-text" class="muted"></p><button class="btn primary wide" id="again">SOLICITAR NOVAMENTE <span class="btn-arrow">↗</span></button></div>
-          <p id="toast" class="toast" role="status" aria-live="polite"></p>
-        </article>
-
-        <article class="panel visualization">
-          <div class="panel-heading"><div><div class="panel-index">ESTAÇÃO 02 <span>•</span> RECEPÇÃO</div><h3>O semáforo responde.</h3></div><span id="mode-badge" class="pill">—</span></div>
-          <div class="receiver-chassis">
-            <div class="receiver-top"><span>RECEPTOR <b>SI4703</b></span><span class="tiny-metal-dot"></span><span>RADIO DATA SYSTEM</span></div>
-            <div class="receiver-grid"><div class="semaphore-wrap"><div class="semaphore"><span id="light-red" class="lamp red-lamp"></span><span id="light-yellow" class="lamp yellow-lamp"></span><span id="light-green" class="lamp green-lamp"></span></div><div class="pole"></div><div class="signal-ground"></div></div><div class="receiver-readout"><span class="receiver-eyebrow">TELEMETRIA DO RECEPTOR</span><span class="readout-label">STATUS DO SINAL</span><strong id="signal-status">Aguardando informação do receptor</strong><div id="signal-code" class="signal-code mono">RDS PAYLOAD —</div><div class="led-text"><i></i> MONITOR DE LUZES</div></div></div>
-          </div>
-          <div class="connection-grid"><div class="connection"><span class="connection-label">TRANSMISSOR <b>ESP32</b></span><span id="tx-health" class="connection-value">VERIFICANDO</span></div><div class="connection"><span class="connection-label">RECEPTOR <b>ESP8266</b></span><span id="rx-health" class="connection-value">VERIFICANDO</span></div></div>
-          <div class="command-progress"><span>ÚLTIMO COMANDO</span><strong id="delivery-state">Aguardando envio</strong></div>
-          <p class="footnote receiver-footnote">O estado das luzes é informado pelo ESP8266 via Wi-Fi; os comandos de acionamento continuam atravessando o enlace FM-RDS. A representação não é uma medição direta do campo de rádio.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="how-section shell"><div class="how-header"><div><div class="section-tag">02 — POR DENTRO DO EXPERIMENTO</div><h2>Da tela ao <em>ar.</em></h2></div><p>A tecnologia do rádio FM, conhecida há décadas, ganha uma nova aplicação em sistemas embarcados.</p></div><div class="how-steps"><div class="how-step"><div class="step-num">01</div><div class="step-icon" aria-hidden="true">▣</div><h4>VOCÊ SOLICITA</h4><p>O visitante acessa o site e aguarda a autorização do expositor.</p></div><div class="how-step"><div class="step-num">02</div><div class="step-icon" aria-hidden="true">⌘</div><h4>O NOTEBOOK ENVIA</h4><p>A Vercel registra a solicitação no Supabase; o notebook busca o comando e o envia ao ESP32 por Wi-Fi.</p></div><div class="how-step"><div class="step-num">03</div><div class="step-icon" aria-hidden="true">⌁</div><h4>O RÁDIO TRANSMITE</h4><p>O Si4713 utiliza FM-RDS para transportar a instrução no sinal.</p></div><div class="how-step"><div class="step-num">04</div><div class="step-icon" aria-hidden="true">◉</div><h4>A LUZ RESPONDE</h4><p>O Si4703 e o ESP8266 interpretam o comando e acionam a maquete.</p></div></div></section>
-    <section class="closing-band"><div class="shell closing-inner"><div><span class="small-kicker">CONCT&amp;T • IFAC • 2026</span><h2>Ciência que sai da tela<br>e <em>ganha o mundo físico.</em></h2></div><div class="closing-mark" aria-hidden="true">⌁ <span>FM</span></div></div></section>
-  </main>
-  <footer class="site-footer"><div class="shell footer-inner"><span>© 2026 • PROJETO ACADÊMICO DEMONSTRATIVO — IFAC</span><span>*Frequência indicada na configuração do protótipo. Não representa medição em tempo real. Uso exclusivo em maquete.</span></div></footer>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="/config.public.js"></script>
-  <script src="/visitor.js"></script>
+</div>
+<div class="payload-lesson" id="payload-lesson"><span class="tiny-section">COMO UM DESTINATÁRIO É INDICADO?</span><div class="payload-illustration"><span>ID <b id="frame-target">SEM-001</b></span><span class="payload-plus">+</span><span>COMANDO <b id="frame-command">—</b></span></div><p>O ESP32 coloca o comando endereçado no RadioText. O receptor confere ID e checksum antes de acionar a maquete.</p></div>
+<div class="connection-grid"><div class="connection"><span class="connection-label">TRANSMISSOR <b>ESP32</b></span><span class="connection-value" id="tx-health">AGUARDANDO USB</span></div><div class="connection"><span class="connection-label">RECEPTOR <b>SEM-001</b></span><span class="connection-value" id="rx-health">SEM RELATÓRIO</span></div></div>
+<div class="command-progress"><span>ÚLTIMA OPERAÇÃO</span><strong id="delivery-state">Nenhum comando enviado</strong></div>
+<p class="footnote receiver-footnote">Somente maquete de baixa tensão. A luz apresentada representa o último estado confirmado pelo receptor; confirme também visualmente o equipamento.</p>
+</article>
+</div>
+</section>
+<section class="how-section shell"><div class="how-header"><div><div class="section-tag">02 — POR DENTRO DO EXPERIMENTO</div><h2>Da tela ao <em>ar.</em></h2></div><p>A tecnologia FM-RDS pode transportar comandos com identificação de destinatário. Aqui mostramos o caminho real do comando entre o site e a maquete.</p></div><div class="how-steps"><div class="how-step"><div class="step-num">01</div><div aria-hidden="true" class="step-icon">▣</div><h4>VOCÊ SOLICITA</h4><p>O visitante acessa o site e pede acesso ao SEM-001.</p></div><div class="how-step"><div class="step-num">02</div><div aria-hidden="true" class="step-icon">⌘</div><h4>A NUVEM ORGANIZA</h4><p>A Vercel e o Supabase registram pedidos e comandos identificados. O notebook encaminha os comandos ao ESP32 por USB.</p></div><div class="how-step"><div class="step-num">03</div><div aria-hidden="true" class="step-icon">⌁</div><h4>O RÁDIO TRANSMITIRÁ</h4><p>O Si4713 usa o FM-RDS para transmitir o ID e o comando no mesmo sinal.</p></div><div class="how-step"><div class="step-num">04</div><div aria-hidden="true" class="step-icon">◉</div><h4>O RECEPTOR RESPONDE</h4><p>O Si4703 decodifica a mensagem; o ESP8266 aciona a maquete e informa a confirmação pela USB.</p></div></div></section>
+<section class="closing-band"><div class="shell closing-inner"><div><span class="small-kicker">CONCT&amp;T • IFAC • 2026</span><h2>Ciência que sai da tela<br/>e <em>ganha o mundo físico.</em></h2></div><div aria-hidden="true" class="closing-mark">⌁ <span>FM</span></div></div></section>
+</main>
+<div id="tutorial-root"></div>
+<footer class="site-footer"><div class="shell footer-inner"><span>© 2026 • PROJETO ACADÊMICO DEMONSTRATIVO — IFAC</span><span>*Frequência indicada na configuração do protótipo. Não representa medição em tempo real. Uso exclusivo em maquete.</span></div></footer>
+<script src="config.public.js"></script>
+<script src="visitor.js"></script>
+<script src="tutorial.js"></script>
 </body>
 </html>
