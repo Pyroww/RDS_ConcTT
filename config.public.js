@@ -1,2 +1,5 @@
-/* IFAC Multi-ID Vercel 1.0 — as credenciais sensíveis ficam somente nas variáveis do servidor. */
-window.IFAC_RDS_CONFIG = { version: '1.0', tutorialAutoStart: true, demoLocal: false, targets: ['SEM-001','SEM-002'] };
+/* Esta configuração é PÚBLICA. Use somente a Publishable Key (sb_publishable_...). */
+window.IFAC_RDS_CONFIG = {
+  supabaseUrl: 'https://SEU-PROJETO.supabase.co',
+  supabasePublishableKey: 'sb_publishable_COLE_A_CHAVE_PUBLICA_AQUI'
+};
